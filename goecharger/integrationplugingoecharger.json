@@ -13,7 +13,7 @@
                     "displayName": "go-eCharger Home",
                     "id": "3b663d51-fdb5-4944-b409-c07f7933877e",
                     "createMethods": ["Discovery", "User"],
-                    "interfaces": ["evcharger", "smartmeterconsumer", "connectable"],
+                    "interfaces": ["evcharger", "connectable"],
                     "paramTypes": [
                         {
                             "id": "4342b72c-99d0-41a5-abc6-ea6c1cc1352c",
@@ -69,6 +69,14 @@
                             "defaultValue": false
                         },
                         {
+                            "id": "48c6cdb8-9fc1-4c14-95df-3e2c62e59361",
+                            "name": "charging",
+                            "displayName": "Charging",
+                            "displayNameEvent": "Charging changed",
+                            "type": "bool",
+                            "defaultValue": false
+                        },
+                        {
                             "id": "d80e1ed8-c3ae-4b68-bf86-21b4d7b2b201",
                             "name": "access",
                             "displayName": "Access",
@@ -98,7 +106,7 @@
                             "displayName": "Charging current",
                             "displayNameEvent": "Charging current changed",
                             "displayNameAction": "Set charging current",
-                            "type": "double",
+                            "type": "uint",
                             "unit": "Ampere",
                             "minValue": 6,
                             "maxValue": 32,
@@ -167,13 +175,23 @@
                         },
                         {
                             "id": "e8258831-ad89-4d27-b295-e8c10dd42b76",
-                            "name": "chargeEnergy",
-                            "displayName": "Charge energy",
-                            "displayNameEvent": "Charge energy changed",
+                            "name": "sessionEnergy",
+                            "displayName": "Session energy",
+                            "displayNameEvent": "Session energy changed",
                             "type": "double",
                             "unit": "KiloWattHour",
                             "defaultValue": 0.0,
                             "suggestLogging": true
+                        },
+                        {
+                            "id": "f00cfcab-9271-48fa-b843-89244c9551ae",
+                            "name": "currentPower",
+                            "displayName": "Current power",
+                            "displayNameEvent": "Current power changed",
+                            "type": "double",
+                            "unit": "Watt",
+                            "defaultValue": 0.00,
+                            "filter": "adaptive"
                         },
                         {
                             "id": "c6f68517-c4cd-415d-9455-b1731f7d9a1a",
@@ -264,6 +282,16 @@
                             "unit": "Volt",
                             "defaultValue": 0.00,
                             "filter": "adaptive"
+                        },
+                        {
+                            "id": "b78d805a-f97c-4c9d-a647-5fc98f8d6dd1",
+                            "name": "phaseCount",
+                            "displayName": "Number of charging phases",
+                            "displayNameEvent": "Number of charging phases changed",
+                            "type": "uint",
+                            "minValue": 1,
+                            "maxValue": 3,
+                            "defaultValue": 1
                         },
                         {
                             "id": "b06479d5-7a38-4fbd-867e-e55bdb54651b",
