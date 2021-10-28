@@ -56,7 +56,6 @@ PLUGIN_DIRS = \
     senic               \
     serialportcommander \
     sgready             \
-    simulation          \
     simpleheatpump      \
     sma                 \
     somfytahoma         \
