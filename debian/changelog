@@ -1,7 +1,46 @@
-nymea-plugins (0.30.0) UNRELEASED; urgency=medium
+nymea-plugins (0.30.0) xenial; urgency=medium
 
 
- -- Michael Zanetti <michael.zanetti@nymea.io>  Mon, 20 Sep 2021 11:19:13 +0200
+  [ Simon Stürz ]
+  * WIP: Add webos support for the LG smarttv plugin
+
+  [ Jenkins ]
+  * WIP: New plugin - smartcar
+
+  [ Michael Zanetti ]
+  * ZigbeePhilipsHue: Use manufacturer specific remote commands
+
+  [ Simon Stürz ]
+  * I2CDevices: Add SHT3x temperature humidity sensor
+
+  [ Michael Zanetti ]
+  * 0.30
+
+  [ Simon Stürz ]
+  * Keba: set limit for charging current and update to new interface
+    definitions
+  * goECharger: set limit for charging current and update to new
+    interface definitions
+  * New Plugin: SG-Ready heat pump based on GPIOs interface
+  * New Plugin: Simple heat pump
+  * genericthings: Update generic SG-Ready thing and add heat pump
+    interfaces
+
+  [ Michael Zanetti ]
+  * Generic things: Add a generic water level sensor
+  * TP-Link Kasa: Add support for the KP115 switch
+  * Generic zigbee presence sensor
+  * WIP: New Plugin: nymea owlets
+  * WIP: ZigbeeHue: Add support for the Hue Wallswitch Module
+
+  [ Simon Stürz ]
+  * GenericThings: add minimal charging current for generic car.
+
+  [ Michael Zanetti ]
+  * Shelly: Fix switch settings for second channel
+  * Move simulation plugin to nymea-plugins-simulation repository
+
+ -- Jenkins <jenkins@nymea.io>  Thu, 28 Oct 2021 08:35:46 +0200
 
 nymea-plugins (0.29.1) xenial; urgency=medium
 
