@@ -924,6 +924,9 @@ void IntegrationPluginGenericThings::executeAction(ThingActionInfo *info)
             thing->setStateValue(carBatteryLevelStateTypeId, action.paramValue(carBatteryLevelActionBatteryLevelParamTypeId));
             thing->setStateValue(carBatteryCriticalStateTypeId, action.paramValue(carBatteryLevelActionBatteryLevelParamTypeId).toInt() < 10);
             info->finish(Thing::ThingErrorNoError);
+        } else if (action.actionTypeId() == carMinChargingCurrentActionTypeId) {
+            thing->setStateValue(carMinChargingCurrentStateTypeId, action.paramValue(carMinChargingCurrentActionMinChargingCurrentParamTypeId).toUInt());
+            info->finish(Thing::ThingErrorNoError);
         }
     } else if (thing->thingClassId() == simpleHeatPumpThingClassId) {
         if (action.actionTypeId() == simpleHeatPumpBoostActionTypeId) {
